@@ -1,17 +1,19 @@
 <!-- created: June 25, 2017 20:52
 // Author: Chris Jalallian
 // Revisions: 
-// -->
+// 6/26 08:00 Linked bootstrap, added viewport, changed title. Add styling and elements later-->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Hangman</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Psychic Game</title>
 
 	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
 
 </head>
 <body>
@@ -19,10 +21,11 @@
 		<h1>Psychic Game</h1>
 	</header>
 	<div class="main-container">
+		<h3>Guess what letter the psychic is thinking of by pressing a letter on your keyboard!</h3>
 		<p id= "userWins"></p>
 		<p id= "userLosses"></p>
 		<p id= "guessRemain"></p>
-		<p id= "guessed"></p>
+		<p id= "guessedLetters"></p>
 	</div>
 
 
