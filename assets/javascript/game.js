@@ -2,6 +2,7 @@
 // Author: Chris Jalallian
 // Revisions:
 // 6/26 08:00 Reworked 
+// 6/26 14:00 Fixed modifiers from being captured on keypress; numbers still occur
 
 var compChoice = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
@@ -14,7 +15,7 @@ var compAnswer = compChoice[Math.floor(Math.random() * compChoice.length)];
 console.log(compAnswer);
 
 document.onkeyup = function(event) {
-	var userGuess = event.key;
+	var userGuess = event.key.toLowerCase();
 
 
 
@@ -51,8 +52,9 @@ document.onkeyup = function(event) {
 	
 	//logging wins
 	console.log("Letter to guess: " + compAnswer)
-	console.log("Wins: " + wins);
-	console.log("Losses: " + losses);
+	// console.log("Wins: " + wins);
+	// console.log("Losses: " + losses);
+	console.log("Guesses remaining: " + guesses)
 	console.log("Letters guessed: " + guessed);
 	document.getElementById("userWins").innerHTML= ("Wins: " + wins);
 	document.getElementById("userLosses").innerHTML= ("Losses: " + losses);
