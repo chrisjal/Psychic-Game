@@ -29,8 +29,9 @@ document.onkeyup = function(event) {
 			// var guesses = 9;
 			wins++;
 			guesses = 9;
-			//resets guessed letter array
+			//resets guessed letter array and gets new letter
 			guessed = [];
+			compAnswer = compChoice[Math.floor(Math.random() * compChoice.length)];
 		}
 
 		if (guesses === 0) {
@@ -38,6 +39,7 @@ document.onkeyup = function(event) {
 			
 			guessed = [];
 			guesses = 9;
+			compAnswer = compChoice[Math.floor(Math.random() * compChoice.length)];
 		}
 
 		else if (guesses === 0) {
